@@ -10,13 +10,13 @@ public class Main {
             Decorator.lineBraker();
 
             System.out.println("Please Choose One Option");
-            System.out.println("1, LOGIN - (i am  a customer)" );
+            Decorator.lineBraker();
+            System.out.println("1, LOGIN - (Logged in customer will get discount)" );
             System.out.println("2, SIGNUP - (get service as a guest) ");
             System.out.println("3, LOGOUT");
             System.out.println("4, GET THE SERVICES AS A GUEST");
             System.out.println("5, ADMIN LOGIN");
             System.out.println("0, EXIT - (i am not interested in this service) ");
-
 
 
             Scanner  sc = new Scanner(System.in);
@@ -36,6 +36,7 @@ public class Main {
                     break;
                  case 5:
                     AdminHandler.login();
+                    break;
                 case 0:
                     isRunning = false;
                     break;

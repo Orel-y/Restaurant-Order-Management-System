@@ -39,7 +39,7 @@ public class CustomerHandler {
         String password = sc.nextLine();
 
         if (name.isEmpty() || password.isEmpty()) {
-            System.out.println("Name and password cannot be empty.");
+            System.out.println("Please Insert The requirements (name, password)");
             return;
         }
 
@@ -65,7 +65,7 @@ public class CustomerHandler {
         String password = scanner.nextLine();
 
         if (name.isEmpty() || password.isEmpty()) {
-            System.out.println("Name and password cannot be empty.");
+            System.out.println("Please Insert The requirements (name, password)");
             return;
         }
 

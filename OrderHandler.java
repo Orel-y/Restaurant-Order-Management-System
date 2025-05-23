@@ -11,14 +11,13 @@ public class OrderHandler {
 
         while (isRunning) {
             Decorator.lineBraker();
-            System.out.println("Please choose one option:");
+            System.out.println("Please choose one number from the following option:");
             Decorator.lineBraker();
 
             System.out.println("1. View Menu");
             System.out.println("2. Order Food");
             System.out.println("3. Cancel Order");
             System.out.println("4. Update Order");
-            System.out.println("5. View My Orders");
             System.out.println("0. Exit");
             Decorator.lineBraker();
 
@@ -37,9 +36,6 @@ public class OrderHandler {
                     break;
                 case 4:
                     updateOrder();
-                    break;
-                case 5:
-                    showAllOrders();
                     break;
                 case 0:
                     exit();
@@ -63,7 +59,11 @@ public class OrderHandler {
         if (price != -1) {
             int customerId = CustomerHandler.loggedIn ? 1 : 0;
             Order order = new Order(nextOrderID++, customerId, foodId, "Ordered");
+
             orders.add(order);
+            if (customerId == 1) {
+                price -= 10;
+            }
             System.out.println("You ordered food with ID " + order.getOrderId() + " for $" + price);
         } else {
             System.out.println("Invalid food ID.");
@@ -91,7 +91,9 @@ public class OrderHandler {
 
     public static void updateOrder() {
         Scanner sc = new Scanner(System.in);
+        Decorator.lineBraker();
         System.out.print("Enter your order ID to update: ");
+        Decorator.lineBraker();
         int orderId = sc.nextInt();
 
         for (Order order : orders) {
@@ -120,7 +122,10 @@ public class OrderHandler {
             return;
         }
 
+        Decorator.lineBraker();
         System.out.println("\nOrder List:");
+        Decorator.lineBraker();
+
         for (Order order : orders) {
             String foodName = MenuOrganizer.getFoodNameById(order.getFoodId());
             System.out.println("Order ID: " + order.getOrderId() +

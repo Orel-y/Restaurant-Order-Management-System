@@ -65,7 +65,6 @@ public class AdminHandler {
             System.out.println("2. Cancel Order");
             System.out.println("3. Update Order");
             System.out.println("4. Logout");
-            System.out.println("0. Exit Admin Dashboard");
 
             int choice = sc.nextInt();
 
@@ -82,9 +81,6 @@ public class AdminHandler {
                 case 4:
                     logout();
                     return;
-                case 0:
-                    running = false;
-                    break;
                 default:
                     System.out.println("Invalid option.");
             }
