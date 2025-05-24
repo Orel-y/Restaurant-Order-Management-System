@@ -53,7 +53,8 @@ public class CustomerHandler {
                 System.out.println("Incorrect password. Please try again.");
             }
         } else {
-            System.out.println("Customer not found. Please sign up.");
+            Decorator.lineBraker();
+            System.out.println(" Customer not found. Please sign up ");
         }
     }
 
