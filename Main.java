@@ -18,30 +18,40 @@ public class Main {
             System.out.println("5, ADMIN LOGIN");
             System.out.println("0, EXIT - (i am not interested in this service) ");
 
+            int option = -1;
+            try {
+                Scanner sc = new Scanner(System.in);
+                option = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println("Please Enter only A number");
+                continue;
+            }
 
-            Scanner  sc = new Scanner(System.in);
-            int option = sc.nextInt();
-            switch (option) {
-                case 1:
-                    CustomerHandler.login();
-                    break;
-                case 2:
-                    CustomerHandler.signUp();
-                    break;
-                case 3:
-                    CustomerHandler.logout();
-                    break;
-                case 4:
-                    OrderHandler.showServices();
-                    break;
-                 case 5:
-                    AdminHandler.login();
-                    break;
-                case 0:
-                    isRunning = false;
-                    break;
-                default:
-                    System.out.println("Invalid option. Please try again.");
+            try {
+                switch (option) {
+                    case 1:
+                        CustomerHandler.login();
+                        break;
+                    case 2:
+                        CustomerHandler.signUp();
+                        break;
+                    case 3:
+                        CustomerHandler.logout();
+                        break;
+                    case 4:
+                        OrderHandler.showServices();
+                        break;
+                    case 5:
+                        AdminHandler.login();
+                        break;
+                    case 0:
+                        isRunning = false;
+                        break;
+                    default:
+                        System.out.println("Invalid option. Please try again.");
+                }
+            } catch (Exception e) {
+                System.out.println("ERROR " + e.getMessage());
             }
         }
 

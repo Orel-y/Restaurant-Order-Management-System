@@ -66,7 +66,15 @@ public class AdminHandler {
             System.out.println("3. Update Order");
             System.out.println("4. Logout");
 
-            int choice = sc.nextInt();
+            int choice = -1;
+            try {
+                System.out.print("Choose your option: ");
+                choice = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println("Enter only Number");
+                sc.next();
+                continue;
+            }
 
             switch (choice) {
                 case 1:
