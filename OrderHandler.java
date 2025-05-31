@@ -136,6 +136,7 @@ public class OrderHandler {
 
     public static void showAllOrders() {
         if (orders.isEmpty()) {
+            Decorator.lineBraker();
             System.out.println("No orders yet.");
             return;
         }
