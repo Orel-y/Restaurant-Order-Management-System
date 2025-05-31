@@ -28,7 +28,7 @@ public class CustomerHandler {
 
     public static void login() {
         if (loggedIn) {
-            System.out.println("You are already logged in.");
+            System.out.println("\u26A0\uFE0F You are already logged in. \u26A0\uFE0F");
             return;
         }
 
@@ -51,11 +51,11 @@ public class CustomerHandler {
 
                     OrderHandler.showServices();
                 } else {
-                    System.out.println("Incorrect password. Please try again.");
+                    System.out.println("\u26A0\uFE0F Incorrect password. Please try again. \u26A0\uFE0F");
                 }
             } else {
                 Decorator.lineBraker();
-                System.out.println(" Customer not found. Please sign up ");
+                System.out.println(" \u26A0\uFE0F Customer not found. Please sign up \u26A0\uFE0F ");
             }
         } catch (Exception e) {
             System.out.println("An error occurred during login: " + e.getMessage());

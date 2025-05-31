@@ -6,7 +6,7 @@ public class Main {
 
         while(isRunning) {
             Decorator.lineBraker();
-            System.out.println("\uD83C\uDF7D\uFE0F Restaurant Order Manager \uD83C\uDF7D\uFE0F ");
+            System.out.println("\uD83C\uDF7D\uFE0F  Restaurant Order Manager \uD83C\uDF7D\uFE0F ");
             Decorator.lineBraker();
 
             System.out.println("Please Choose One Option");
@@ -17,6 +17,7 @@ public class Main {
             System.out.println("4, GET THE SERVICES AS A GUEST");
             System.out.println("5, ADMIN LOGIN");
             System.out.println("0, EXIT - (i am not interested in this service) ");
+            Decorator.lineBraker();
 
             int option = -1;
             try {
