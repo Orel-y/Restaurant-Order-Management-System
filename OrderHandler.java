@@ -16,8 +16,7 @@ public class OrderHandler {
 
             System.out.println("1. View Menu");
             System.out.println("2. Order Food");
-            System.out.println("3. Cancel Order");
-            System.out.println("4. Update Order");
+
             System.out.println("0. Exit");
             Decorator.lineBraker();
 
@@ -36,12 +35,6 @@ public class OrderHandler {
                     break;
                 case 2:
                     orderFood();
-                    break;
-                case 3:
-                    cancelOrder();
-                    break;
-                case 4:
-                    updateOrder();
                     break;
                 case 0:
                     exit();
