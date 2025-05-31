@@ -10,8 +10,6 @@ A simple console-based food ordering system built in Java that supports both **c
 - Sign up / Log in / Log out
 - View food menu
 - Place a food order
-- Cancel existing orders
-- Update orders
 
 ###  Admin
 - Secure login with default credentials
